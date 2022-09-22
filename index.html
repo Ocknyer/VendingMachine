@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img class="logo" src="./images/logo.png" alt="코카콜라 로고">
+    <div class="container">
+        <div class="select-cola">
+            <div class="btn-cola">
+                <button><img src="./images/Original_Cola.png" alt=""><p>Original_Cola</p><p class="price">1000원</p></button>
+                <button><img src="./images/Violet_Cola.png" alt=""><p>Violet_Cola</p><p class="price">1000원</p></button>
+                <button><img src="./images/Yellow_Cola.png" alt=""><p>Yellow_Cola</p><p class="price">1000원</p></button>
+                <button><img src="./images/Cool_Cola.png" alt=""><p>Cool_Cola</p><p class="price">1000원</p></button>
+                <button><img src="./images/Green_Cola.png" alt=""><p>Green_Cola</p><p class="price">1000원</p></button>
+                <button><img src="./images/Orange_Cola.png" alt=""><p>Orange_Cola</p><p class="price">1000원</p></button>
+            </div>
+            <div class="inp-money">
+                <p>잔액 : <span>원</span></p>
+                <button class="btn-return-money">거스름돈 반환</button>
+                <input type="text" placeholder="입금액 입력" class="inp-deposit">
+                <button class="btn-deposit">입금</button>
+            </div>
+            <div class="scroll-box">
+                <div class="cola-cart">
+                    <ul>
+                    <li>
+                        <img src="./images/Original_Cola.svg" alt="">
+                        <p class="list-txt">Original_Colap</p>
+                        <p class="cola-num">1</p>
+                    </li>
+                    <li>
+                        <img src="./images/Original_Cola.svg" alt="">
+                        <p class="list-txt">Original_Colap</p>
+                        <p class="cola-num">1</p>
+                    </li>
+                    <li>
+                        <img src="./images/Original_Cola.svg" alt="">
+                        <p class="list-txt">Original_Colap</p>
+                        <p class="cola-num">1</p>
+                    </li>
+                    <li>
+                        <img src="./images/Original_Cola.svg" alt="">
+                        <p class="list-txt">Original_Colap</p>
+                        <p class="cola-num">1</p>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn-get" >획득</button>
+        </div>
+        <div class="cola-out">
+            <div class="my-money">
+                <p>소지금 : <span class="money-now">원</span></p>
+            </div>
+            <div class="cola-get">
+                <h2>획득한 음료</h2>
+                <div class="get-list"></div>
+                <div class="sum"><p>총금액 :<span> 원</span></p></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
