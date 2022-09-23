@@ -2,8 +2,8 @@
 * {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
-    border-radius: 5px;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 img {
@@ -27,14 +27,11 @@ button, input {
     display: block;
     width: 386px;
     margin: 0 auto;
+    border-radius: 0;
 }
 
 .container {
     display: flex;
-    /* position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     margin-top: 67px;
     justify-content: center;
 }
@@ -43,6 +40,7 @@ button, input {
 .select-cola {
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 0;
     width: 360px;
     height: 545px;
     padding: 31px 27px 28px;
@@ -58,6 +56,7 @@ button, input {
 }
 
 .btn-cola button {
+    position: relative;
     width: 94px;
     height: 130px;
     padding: 11px 12px 9px;
@@ -71,6 +70,20 @@ button, input {
     outline: 3px solid #6327FE;
 }
 
+.btn-cola button::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94px;
+    height: 130px;
+    border: none;
+    border-radius: 10px;
+    background: url(/images/Sold-out.png) center no-repeat;
+    background-size: 70%; 
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 .btn-cola p {
     font-size: 9px;
@@ -203,12 +216,14 @@ button, input {
 /* right section */
 .cola-out {
     display: flex;
+    width: 360px;
     flex-direction: column;
 }
 
 .my-money {
     display: flex;
     font-size: 14px;
+    width: 100%;
     height: 50px;
     padding: 9px 27px;
     margin-bottom: 20px;
