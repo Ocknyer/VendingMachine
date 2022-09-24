@@ -1,6 +1,7 @@
 @media screen and (max-width:650px) {
     body {
         background-color: white;
+        width: 360px;
     }
     
     .logo {
