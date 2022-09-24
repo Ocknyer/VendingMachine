@@ -138,39 +138,49 @@ button, input {
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
+.cart-get {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    height: 106px;
+}
+
 .cola-cart {
     overflow:auto;
-    /* overflow-x: hidden; */
-    width: 100%;
+    /* flex-basis: 200px; */
+    /* width: 100%; */
     height: 104px;
-    padding: 11px 14px 11px 8px;
+    padding: 11px 14px 11px 11px;
 }
 
 /* 스크롤바 */
 .scroll-box {
-    width: 200px;
-    padding: 0 3px;
-    margin-right: 12px;
+    /* flex-basis: 200px; */
+    width: 100%;
+    padding-right: 3px;
+    /* margin-right: 12px; */
     background-color: #EAE8FE;
     border: 1px solid #BDBDBD;
 }
 
-.cola-cart::-webkit-scrollbar {
+.cola-cart::-webkit-scrollbar,
+.get-list::-webkit-scrollbar {
     width: 4px;
 }
-.cola-cart::-webkit-scrollbar-thumb {
+.cola-cart::-webkit-scrollbar-thumb,
+.get-list::-webkit-scrollbar-thumb {
     height: 79px;
     background-clip: padding-box;
     background-color:#fff;
     border-radius: 50px;
 }
 
-.cola-cart::-webkit-scrollbar-track {
+.cola-cart::-webkit-scrollbar-track,
+.get-list::-webkit-scrollbar-track {
     background-color: #EAE8FE;
 }
 
-
-.cola-cart li {
+.cola-cart li, .get-list li{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -182,7 +192,7 @@ button, input {
     background-color: #fff;
 }
 
-.cola-cart img {
+.cola-cart img, .get-list img {
     width: 18px;
     height: 33px;
     margin-right: 10px;
@@ -205,6 +215,7 @@ button, input {
 
 .btn-get {
     font-size: 13px;
+    flex-shrink: 0;
     color: #fff;
     width: 94px;
     height: 106px;
@@ -249,8 +260,8 @@ button, input {
 
 .cola-get {
     width: 360px;
-    height: 474px;
-    padding: 25px 26px 27px;
+    height: 475px;
+    padding: 25px 27px 27px;
     background-color: #fff;
     box-sizing: border-box;
     text-align: center;
@@ -263,12 +274,16 @@ button, input {
 }
 
 .get-list {
+    overflow: auto;
     width: 100%;
     height: 364px;
-    padding: 12px;
-    margin-bottom: 6px;
-    border: 1px solid #BDBDBD;
+    padding: 12px 9px 12px 12px;
     background-color: #EAE8FE;
+}
+
+.scroll-box:nth-child(2) {
+    margin-right: 0;
+    margin-bottom: 6px;
 }
 
 .sum {
