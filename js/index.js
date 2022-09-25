@@ -1,5 +1,11 @@
-// const selectCola = document.getElementById('btn-cola');
+// 변수 선언
 const btnCola = document.querySelectorAll('.item');
+const cashInHand = document.getElementById('cash-inhand');
+const btnDeposit = document.querySelector('.btn-deposit');
+const restMoney = document.querySelector('.money-rest');
+const inpDeposit = document.querySelector('.inp-deposit');
+
+
 
 console.log(btnCola)
 btnCola.forEach((value) => {
@@ -9,6 +15,11 @@ btnCola.forEach((value) => {
 });
 
 
+btnDeposit.addEventListener('submit', (e) => {
+    e.preventDefault()
+    restMoney.textContent = inpDeposit.value;
+})
+
 // const colaItem = document.querySelectorAll(".item");
 
 // colaItem.forEach((value) => {
@@ -17,3 +28,16 @@ btnCola.forEach((value) => {
 //     value.classList.add("active");
 //   });
 // });
+
+
+// locationForm.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     const locationOne = job.value
+//     const locationTwo = (10000 / time.value).toFixed();
+//     resultJob.textContent = locationOne;
+//     resultTime.textContent = locationTwo;
+//     loadingTime();
+//     setTimeout(function () {
+//        loadingTimeout();
+//     }, 1300);
+//  });

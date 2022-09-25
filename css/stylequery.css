@@ -1,7 +1,7 @@
-@media screen and (max-width:650px) {
+@media screen and (max-width:700px) {
     body {
         background-color: white;
-        width: 360px;
+        width: 100%;
     }
     
     .logo {
@@ -13,6 +13,8 @@
         margin-top: 25px;
         flex-direction: column;
         align-items: center;
+        width: 360px;
+        margin: 0 auto;
     }
 
     .select-cola {

@@ -48,6 +48,15 @@ button, input {
     background-color: #fff;
 }
 
+.txt-hide {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip-path: inset(0 0 0 0);
+}
+
 .btn-cola {
     display: flex;
     flex-wrap: wrap;
@@ -136,6 +145,7 @@ button, input {
     width: 94px;
     height: 32px;
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+    background-color: white;
 }
 
 .cart-get {
@@ -147,31 +157,25 @@ button, input {
 
 .cola-cart {
     overflow:auto;
-    /* flex-basis: 200px; */
-    /* width: 100%; */
-    height: 104px;
-    padding: 11px 14px 11px 11px;
-}
-
-/* 스크롤바 */
-.scroll-box {
-    /* flex-basis: 200px; */
     width: 100%;
-    padding-right: 3px;
-    /* margin-right: 12px; */
+    height: 106px;
+    padding: 11px;
     background-color: #EAE8FE;
     border: 1px solid #BDBDBD;
 }
 
+/* 스크롤바 */
 .cola-cart::-webkit-scrollbar,
 .get-list::-webkit-scrollbar {
-    width: 4px;
+    width: 8px;
 }
+
 .cola-cart::-webkit-scrollbar-thumb,
 .get-list::-webkit-scrollbar-thumb {
     height: 79px;
     background-clip: padding-box;
     background-color:#fff;
+    border: 2px solid transparent;
     border-radius: 50px;
 }
 
@@ -204,7 +208,6 @@ button, input {
 
 .cola-num {
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
     font-size: 14px;
@@ -248,14 +251,10 @@ button, input {
     width: 100%;
     height: 32px;
     padding: 6px 10px;
+    font-weight: 700;
     align-items: center;
     justify-content: space-between;
     background-color: #EAE8FE;
-}
-
-.money-now {
-    display: flex;
-    font-size: 700;
 }
 
 .cola-get {
@@ -267,7 +266,7 @@ button, input {
     text-align: center;
 }
 
-.cola-get h2 {
+.cola-get h3 {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 13px;
@@ -277,14 +276,12 @@ button, input {
     overflow: auto;
     width: 100%;
     height: 364px;
-    padding: 12px 9px 12px 12px;
+    padding: 12px 12px 12px 12px;
+    margin-bottom: 6px;
+    border: 1px solid #BDBDBD;
     background-color: #EAE8FE;
 }
 
-.scroll-box:nth-child(2) {
-    margin-right: 0;
-    margin-bottom: 6px;
-}
 
 .sum {
     display: flex;
