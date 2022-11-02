@@ -40,7 +40,7 @@ button, input {
 .select-cola {
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     width: 360px;
     height: 545px;
     padding: 31px 27px 28px;
@@ -64,7 +64,7 @@ button, input {
     margin-bottom: 20px;
 }
 
-.item {
+.btn-cola .item {
     position: relative;
     width: 94px;
     height: 130px;
@@ -75,25 +75,25 @@ button, input {
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
-.item.push {
+.btn-cola .item.push {
     outline: 3px solid #6327FE;
 }
 
+.btn-cola .item.sold-out {
+    outline: none;
+}
+
 /* 품절 표시 */
-.btn-cola button::after {
-    display: none;
+.btn-cola .item.sold-out::after {
     content: '품절';
     color: transparent;
     position: absolute;
     top: 0;
     left: 0;
-    width: 94px;
-    height: 130px;
-    border: none;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    background: url(../images/Sold-out.png) center no-repeat;
-    background-size: 70%; 
-    background-color: rgba(0, 0, 0, 0.8);
+    background:  rgba(0, 0, 0, 0.8) url(../images/Sold-out.png) center/70% no-repeat;
 }
 
 .btn-cola p {
@@ -113,7 +113,7 @@ button, input {
 
 .btn-cola img {
     width: 36px;
-    height: 65px;
+    /* height: 65px; */
 }
 
 .inp-money {
@@ -200,7 +200,6 @@ button, input {
 
 .cola-cart img, .get-list img {
     width: 18px;
-    height: 33px;
     margin-right: 10px;
 }
 
