@@ -25,6 +25,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 body {
 	line-height: 1;
 }
@@ -46,4 +54,19 @@ table {
 
 button {
 	cursor: pointer;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    background-color: #EAE8FE;
+}
+
+button, input {
+    font-weight: 500;
+    border: none;
 }
