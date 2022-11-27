@@ -51,14 +51,14 @@ const inhand = document.querySelector('.txt-inhand')
 const total = document.querySelector('.txt-total')
 const getItemList = document.querySelector('.get-list')
 
-// 콜라 버튼을 렌더링 해주는 기능
+// 콜라 버튼 렌더링
 colaData.forEach((item) => {
     const frag = document.createDocumentFragment();
     const listItem = document.createElement('li');
     const templates = `
     <button type="button" class="item" data-item="${item.name}" data-stock="${item.stock}" data-price="${item.price}" data-img="${item.img}">
         <img src="./images/${item.img}" alt="" class="img-item">
-        <strong class="item-name">${item.name}</strong>
+        <p class="item-name">${item.name}</p>
         <span class="txt-price">${item.price}원</span>
     </button>
     `
@@ -67,7 +67,7 @@ colaData.forEach((item) => {
     rightSection.appendChild(frag);
 })
 
-// 입금액을 입력하고 입금 버튼을 누르면 잔액과 소지금에 변화를 주는 기능
+// 입금액을 입력하고 입금 버튼을 누르면 잔액과 소지금 변화
 btnDeposit.addEventListener('click', (event)=> {
     event.preventDefault()
     const inputCost = parseInt(inpDeposit.value)
@@ -85,7 +85,7 @@ btnDeposit.addEventListener('click', (event)=> {
     }
 })
 
-// 거스름돈 반환 기능
+// 거스름돈 반환
 btnReturn.addEventListener('click', (event) => {
     const myMoney = parseInt(inhand.textContent.replaceAll(',', ''));
     const balance = parseInt(txtBalance.textContent.replaceAll(',', ''));
@@ -126,7 +126,7 @@ btnCola.forEach((item) => {
                 cartItem.innerHTML = `
                     <button type="button" class="btn-cola-minus">
                         <img src="./images/${item.dataset.img}" alt="" class="img-cart-item">
-                        <strong class="item-name">${item.dataset.item}</strong>
+                        <p class="item-name">${item.dataset.item}</p>
                         <span class="num-counter">1</span>
                     </button>
                 `;
@@ -149,7 +149,7 @@ btnCola.forEach((item) => {
     })
 });
 
-// 획득 버튼 클릭 시 획득한 음료 탭으로 음료 이동시키는 기능
+// 획득 버튼 클릭 시 획득한 음료 탭으로 음료 이동
 btnGet.addEventListener('click', () => {
     let isGot = false;
     let totalPrice = 0;
@@ -167,6 +167,9 @@ btnGet.addEventListener('click', () => {
             getItemList.appendChild(itemStaged);
         }
     }
-
-
+    // 총 금액 표시
+    getItemList.querySelectorAll('li').forEach((itemGot) => {
+        totalPrice += itemGot.dataset.price * ~~(itemGot.querySelector('.num-counter').textContent);
+    })
+    total.textContent = `총금액 : ${new Intl.NumberFormat().format(totalPrice)} ₩`;
 })
