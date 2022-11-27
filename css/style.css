@@ -72,13 +72,14 @@
     background:  rgba(0, 0, 0, 0.8) url(../images/Sold-out.png) center/70% no-repeat;
 }
 
-.btn-cola p {
+.item-name {
     font-size: 9px;
     line-height: 11px;
     margin: 6px 0 7px;
 }
 
-.btn-cola .price { 
+.btn-cola .item .txt-price {
+    display: block;
     font-size: 12px;
     line-height: 12px;
     padding: 5px 15px;
@@ -162,28 +163,29 @@
     background-color: #EAE8FE;
 }
 
-.cola-cart li, .get-list-box li{
+.btn-cola-minus {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 9px;
     width: 100%; 
-    /* height: 46px; */
+    height: 46px;
     padding: 6px 8px 7px 10px;
     margin-bottom: 6px;
     background-color: #fff;
 }
 
-.cola-cart img, .get-list-box img {
+.img-cart-item {
     width: 18px;
     margin-right: 10px;
 }
 
-.list-txt {
+.btn-cola-minus,
+.item-name {
     margin-right: auto;
 }
 
-.cola-num {
+.num-counter {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -261,12 +263,12 @@
 }
 
 
-.txt-sum {
+.txt-total {
     display: flex;
     justify-content: right;
 }
 
-.txt-sum p {
+.txt-total p {
     font-size: 12px;
     line-height: 17px;
 }
