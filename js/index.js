@@ -167,6 +167,8 @@ btnGet.addEventListener('click', () => {
             getItemList.appendChild(itemStaged);
         }
     }
+    itemCart.innerHTML = null;
+
     // 총 금액 표시
     getItemList.querySelectorAll('li').forEach((itemGot) => {
         totalPrice += itemGot.dataset.price * ~~(itemGot.querySelector('.num-counter').textContent);
