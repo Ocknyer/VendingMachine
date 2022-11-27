@@ -52,15 +52,15 @@
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
-.btn-cola .item.push {
+.btn-cola .item:active {
     outline: 3px solid #6327FE;
 }
 
-.btn-cola .item.sold-out {
+/* .btn-cola .sold-out {
     outline: none;
-}
+} */
 
-.btn-cola .item.sold-out::after {
+.btn-cola .item.sold-out::before {
     content: '품절';
     color: transparent;
     position: absolute;
