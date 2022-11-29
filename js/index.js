@@ -69,10 +69,11 @@ colaData.forEach((item) => {
 
 // 입금액을 입력하고 입금 버튼을 누르면 잔액과 소지금 변화
 btnDeposit.addEventListener('click', (event)=> {
-    event.preventDefault()
     const inputCost = parseInt(inpDeposit.value)
     const myMoney = parseInt(inhand.textContent.replaceAll(',', ''));
     const balance = parseInt(txtBalance.textContent.replaceAll(',', ''));
+    
+    event.preventDefault()
     
     if (inputCost) {
         if (inputCost <= myMoney && inputCost > 0) {
@@ -89,6 +90,8 @@ btnDeposit.addEventListener('click', (event)=> {
 btnReturn.addEventListener('click', (event) => {
     const myMoney = parseInt(inhand.textContent.replaceAll(',', ''));
     const balance = parseInt(txtBalance.textContent.replaceAll(',', ''));
+
+    event.preventDefault()
     
     if (balance) {
         inhand.textContent = new Intl.NumberFormat().format(balance + myMoney) + '원';
@@ -139,9 +142,10 @@ btnCola.forEach((item) => {
                 targetEl.classList.add('sold-out')
                 targetEl.disabled = true;
                 const soldOut = document.createElement('em');
-                soldOut.textContent = '해당 상품은 품절되었습니다.';
-                soldOut.classList.add('txt-hide');
-                targetEl.parentElement.insertBefore(soldOut, targetEl);
+                // soldOut.textContent = '해당 상품은 품절되었습니다.';
+                // soldOut.classList.add('txt-hide');
+                // targetEl.parentElement.insertBefore(soldOut, targetEl);
+                targetEl.insertAdjacentHTML('afterbegin', '<em class="txt-hide">해당상품은 품절입니다.</em>');
             }
         } else if (balance < itemPrice) {
             alert('잔액이 부족합니다. 돈을 입금해주세요.')
