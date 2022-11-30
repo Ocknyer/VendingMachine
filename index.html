@@ -22,8 +22,9 @@
             <!-- 입금, 반환 폼 -->
             <form class="inp-money">
                 <p>잔액 : <span class="txt-balance">0원</span></p>
-                <button class="btn-return">거스름돈 반환</button>
-                <input type="number" placeholder="입금액 입력" class="inp-deposit">
+                <button type="button" class="btn-return">거스름돈 반환</button>
+                <input id="deposit" type="number" placeholder="입금액 입력" class="inp-deposit">
+                <label for="deposit" class="txt-hide"></label>
                 <button class="btn-deposit" type="submit">입금</button>
             </form>
             <!-- // 입금, 반환 폼 -->
@@ -56,6 +57,6 @@
         </section>
         <!-- // 소지금, 획득 음료 리스트 -->
     </div>
-    <script src="js/index.js"></script>
+    <script src="/js/index.js" type="module"></script>
 </body>
 </html>

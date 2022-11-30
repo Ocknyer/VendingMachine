@@ -1,4 +1,4 @@
-let colaData = [
+const colaData = [
     {
         name: 'Original_Cola',
         img: '../images/Original_Cola.svg',
@@ -36,3 +36,5 @@ let colaData = [
         stock: 5,
     },
 ]
+
+export default colaData;

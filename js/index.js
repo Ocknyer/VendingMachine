@@ -1,41 +1,4 @@
-let colaData = [
-    {
-        name: 'Original_Cola',
-        img: '../images/Original_Cola.svg',
-        price: 1000,
-        stock: 5,
-    },
-    {
-        name: 'Violet_Cola',
-        img: '../images/Violet_Cola.svg',
-        price: 1000,
-        stock: 5,
-    },
-    {
-        name: 'Yellow_Cola',
-        img: '../images/Yellow_Cola.svg',
-        price: 1000,
-        stock: 5,
-    },
-    {
-        name: 'Cool_Cola',
-        img: '../images/Cool_Cola.svg',
-        price: 1000,
-        stock: 5,
-    },
-    {
-        name: 'Green_Cola',
-        img: '../images/Green_Cola.svg',
-        price: 1000,
-        stock: 5,
-    },
-    {
-        name: 'Orange_Cola',
-        img: '../images/Orange_Cola.svg',
-        price: 1000,
-        stock: 5,
-    },
-]
+import colaData from "./cola.js";
 
 // 변수 선언
 const rightSection = document.querySelector('.btn-cola')
@@ -69,11 +32,11 @@ colaData.forEach((item) => {
 
 // 입금액을 입력하고 입금 버튼을 누르면 잔액과 소지금 변화
 btnDeposit.addEventListener('click', (event)=> {
+    event.preventDefault()
     const inputCost = parseInt(inpDeposit.value)
     const myMoney = parseInt(inhand.textContent.replaceAll(',', ''));
     const balance = parseInt(txtBalance.textContent.replaceAll(',', ''));
     
-    event.preventDefault()
     
     if (inputCost) {
         if (inputCost <= myMoney && inputCost > 0) {
