@@ -58,7 +58,7 @@ btnReturn.addEventListener('click', (event) => {
     
     if (balance) {
         inhand.textContent = new Intl.NumberFormat().format(balance + myMoney) + '원';
-        txtBalance.textContent = '원';
+        txtBalance.textContent = '0 원';
     }
 })
 
