@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vending Machine</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stylequery.css">
-</head>
-<body>
-    <img class="logo" src="./images/logo.png" alt="코카콜라 로고">
-    <div class="container">
-        <section class="select-cola">
-            <!-- 콜라 버튼 -->
-            <h2 class="txt-hide">콜라 선택 버튼</h2>
-            <ul class="btn-cola">
-            </ul>
-            <!-- // 콜라 버튼 -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vending Machine</title>
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/stylequery.css" />
+    </head>
+    <body>
+        <img class="logo" src="./images/logo.png" alt="코카콜라 로고" />
+        <div class="container">
+            <section class="select-cola">
+                <!-- 콜라 버튼 -->
+                <h2 class="txt-hide">콜라 선택 버튼</h2>
+                <ul class="btn-cola"></ul>
+                <!-- // 콜라 버튼 -->
 
-            <!-- 입금, 반환 폼 -->
-            <form class="inp-money">
-                <p>잔액 : <span class="txt-balance">0원</span></p>
-                <button type="button" class="btn-return">거스름돈 반환</button>
-                <input id="deposit" type="number" placeholder="입금액 입력" class="inp-deposit">
-                <label for="deposit" class="txt-hide"></label>
-                <button class="btn-deposit" type="submit">입금</button>
-            </form>
-            <!-- // 입금, 반환 폼 -->
+                <!-- 입금, 반환 폼 -->
+                <form class="inp-money">
+                    <p>잔액 : <span class="txt-balance">0원</span></p>
+                    <button type="button" class="btn-return">
+                        거스름돈 반환
+                    </button>
+                    <input
+                        id="deposit"
+                        type="number"
+                        placeholder="입금액 입력"
+                        class="inp-deposit"
+                    />
+                    <label for="deposit" class="txt-hide"></label>
+                    <button class="btn-deposit" type="submit">입금</button>
+                </form>
+                <!-- // 입금, 반환 폼 -->
 
-            <!-- 카트와 획득 버튼 -->
-            <div class="cart-get">
-                <div class="cola-cart">
-                    <ul class="item-list">
-                    </ul>
+                <!-- 카트와 획득 버튼 -->
+                <div class="cart-get">
+                    <div class="cola-cart">
+                        <ul class="item-list"></ul>
+                    </div>
+                    <button class="btn-get">획득</button>
                 </div>
-                <button class="btn-get" >획득</button>
-            </div>
-            <!-- // 카트와 획득 버튼 -->
-        </section>
+                <!-- // 카트와 획득 버튼 -->
+            </section>
 
-        <!-- 소지금, 획득 음료 리스트 -->
-        <section class="cola-out">
-            <h2 class="txt-hide">소지금과 획득한 음료</h2>
-            <div class="my-money">
-                <p>소지금 : <span class="txt-inhand">25,000원</span></p>
-            </div>
-            <div class="cola-get">
-                <h3>획득한 음료</h3>
-                <div class="get-list-box">
-                    <ul class="get-list">
-                    </ul>
+            <!-- 소지금, 획득 음료 리스트 -->
+            <section class="cola-out">
+                <h2 class="txt-hide">소지금과 획득한 음료</h2>
+                <div class="my-money">
+                    <p>소지금 : <span class="txt-inhand">25,000원</span></p>
                 </div>
-                <div class="txt-total">총금액 :&nbsp;<span>&#8361;</span></div>
-            </div>
-        </section>
-        <!-- // 소지금, 획득 음료 리스트 -->
-    </div>
-    <script src="./js/index.js" type="module"></script>
-</body>
+                <div class="cola-get">
+                    <h3>획득한 음료</h3>
+                    <div class="get-list-box">
+                        <ul class="get-list"></ul>
+                    </div>
+                    <div class="txt-total">
+                        총금액 :&nbsp;<span>&#8361;</span>
+                    </div>
+                </div>
+            </section>
+            <!-- // 소지금, 획득 음료 리스트 -->
+        </div>
+        <script src="./js/index.js" type="module"></script>
+    </body>
 </html>
